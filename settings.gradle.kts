@@ -1,0 +1,1 @@
+rootProject.name = "Gioco_MCG"
