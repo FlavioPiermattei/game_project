@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml">
+<!-- Root layout of the UI.
+     BorderPane is a container that divides the screen into regions (top, center, bottom, etc.) -->
+<BorderPane fx:id="rootPane"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.unicam.gioco.controller.MainController">
+
+    <!-- Center region of the BorderPane -->
+    <center>
+        <!-- VBox arranges elements vertically (one under the other) -->
+        <VBox fx:id="mainContainer" alignment="CENTER" spacing="20">
+
+            <!-- Static title label -->
+            <Label text="Benvenuto nel gioco"/>
+
+            <!-- Label controlled by the controller (dynamic content) -->
+            <Label fx:id="statusLabel" text="Game not started"/>
+
+            <!-- Button that triggers a method in the controller -->
+            <Button text="Start Game" onAction="#handleStartGame"/>
+
+        </VBox>
+    </center>
+
 </BorderPane>
