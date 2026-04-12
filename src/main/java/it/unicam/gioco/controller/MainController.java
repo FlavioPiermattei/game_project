@@ -1,6 +1,7 @@
 package it.unicam.gioco.controller;
 
 import it.unicam.gioco.service.GameService;
+import it.unicam.gioco.service.NavigationService;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,6 +14,7 @@ import java.io.IOException;
 public class MainController {
 
     private GameService gameService;
+    private NavigationService navigationService;
 
     @FXML
     private Label statusLabel;
@@ -60,19 +62,7 @@ public class MainController {
         gameService.startNewGame();
 
         statusLabel.setText("Game Started");
-
-        try {
-
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/fxml/game-view.fxml")
-            );
-
-            Node gameView = loader.load();
-            rootPane.setCenter(gameView);
-
-        }catch (IOException e) {
-            e.printStackTrace();
-        }
+        navigationService.navigateTo("/fxml/game-view.fxml");
 
         System.out.println("Start Game button clicked");
         System.out.println("Game started: " + gameService.getGameState().isGameStarted());
