@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-<StackPane xmlns:fx="http://javafx.com/fxml">
+<?import javafx.scene.control.Button?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="it.unicam.gioco.controller.GameController"
+      alignment="CENTER"
+      spacing="20">
+
     <Label text="Game Screen" style="-fx-font-size: 24px;"/>
-</StackPane>
+    <Label fx:id="gameStatusLabel" text="Game status"/>
+    <Label fx:id="sceneNameLabel" text="Scene name"/>
+    <Label fx:id="playerNameLabel" text="Player Name"/>
+    <Label fx:id="playerHealthLabel" text="Player Health"/>
+    <Label fx:id="playerLevelLabel" text="Player Level"/>
+    <Label fx:id="enemyNameLabel" text="Enemy Name"/>
+    <Label fx:id="enemyHealthLabel" text="Enemy Health"/>
+    <Button text="Attack" onAction="#handleAttack"/>
 
+</VBox>

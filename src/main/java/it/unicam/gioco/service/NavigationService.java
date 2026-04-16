@@ -14,7 +14,7 @@ public class NavigationService {
         this.rootPane = rootPane;
     }
 
-    public void navigateTo(String fxmlPath){
+    public Object navigateTo(String fxmlPath){
         try {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource(fxmlPath)
@@ -22,8 +22,10 @@ public class NavigationService {
         Node view = loader.load();
         rootPane.setCenter(view);
 
+        return loader.getController();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 }

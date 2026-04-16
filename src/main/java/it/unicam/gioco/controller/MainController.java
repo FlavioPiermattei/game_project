@@ -38,6 +38,9 @@ public class MainController {
      */
     public void initialize() {
         this.gameService = new GameService();
+        this.navigationService = new NavigationService();
+
+        navigationService.setRootPane(rootPane);
 
         statusLabel.setText("Game not started");
 
@@ -62,7 +65,12 @@ public class MainController {
         gameService.startNewGame();
 
         statusLabel.setText("Game Started");
-        navigationService.navigateTo("/fxml/game-view.fxml");
+        Object controller = navigationService.navigateTo("/fxml/game-view.fxml");
+
+        if (controller instanceof GameController gameController) {
+            gameController.setGameService(gameService);
+        }
+
 
         System.out.println("Start Game button clicked");
         System.out.println("Game started: " + gameService.getGameState().isGameStarted());

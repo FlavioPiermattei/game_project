@@ -7,6 +7,9 @@
     <list default="true" id="366f2bcf-8dee-4192-8d42-7b4fa7f0548a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/service/NavigationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/service/NavigationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/game-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +71,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/navigation-service&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/flavi/Desktop/Università/Modellazione/ProgettoMGC/Gioco_MCG&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/flavi/Desktop/Università/Modellazione/ProgettoMGC/Gioco_MCG/src/main/java/org/example/Main.java&quot;,
