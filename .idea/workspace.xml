@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="366f2bcf-8dee-4192-8d42-7b4fa7f0548a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/GameCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/service/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/service/NavigationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/service/NavigationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/game-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,6 +113,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Gioco_MCG [:run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.MainApplication" />
+      <item itemvalue="Gradle.Gioco_MCG [:run]" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApplication" />

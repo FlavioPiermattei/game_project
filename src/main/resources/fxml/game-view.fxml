@@ -17,11 +17,12 @@
     <Label fx:id="playerHealthLabel" text="Player Health"/>
     <ProgressBar fx:id="playerHealthBar" prefWidth="200"/>
     <Label fx:id="playerLevelLabel" text="Player Level"/>
+    <Label fx:id="xpLabel" text="xp"/>
     <Label fx:id="enemyNameLabel" text="Enemy Name"/>
     <Label fx:id="enemyHealthLabel" text="Enemy Health"/>
     <ProgressBar fx:id="enemyHealthBar" prefWidth="200"/>
     <Label fx:id="battleMessageLabel" text="Battle Message"/>
     <Button fx:id="attackButton" text="Attack" onAction="#handleAttack"/>
     <Button fx:id="healButton" text="Heal" onAction="#handleHeal"/>
-
+    <Button fx:id="nextEnemyButton" text="nextEnemy" onAction="#handleNextEnemy"/>
 </VBox>

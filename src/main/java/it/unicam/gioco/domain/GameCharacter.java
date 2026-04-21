@@ -6,12 +6,18 @@ public abstract class GameCharacter {
     private int healthPoints;
     private int attackPoints;
     private int maxHealthPoints;
+    protected int level;
 
-    public GameCharacter(String nome, int healthPoints, int attackPoints) {
+    public GameCharacter(String nome,int level, int healthPoints, int attackPoints) {
         this.name = nome;
         this.attackPoints = attackPoints;
         this.healthPoints = healthPoints;
         this.maxHealthPoints = healthPoints;
+        this.level = level;
+    }
+
+    public int getLevel() {
+        return level;
     }
 
     public String getName() {
@@ -52,5 +58,22 @@ public abstract class GameCharacter {
         if(this.healthPoints > maxHealthPoints){
             this.healthPoints = this.maxHealthPoints;
         }
+    }
+
+    protected void increaseMaxHealtPoints(int amount){
+        this.maxHealthPoints += amount;
+    }
+
+    protected void increaseAttackPoints(int amount) {
+        this.attackPoints += amount;
+    }
+
+    public void increaseLevel(){
+        this.level++;
+    }
+
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 }

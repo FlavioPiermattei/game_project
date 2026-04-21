@@ -1,5 +1,6 @@
 package it.unicam.gioco.controller;
 
+import it.unicam.gioco.domain.BattleResult;
 import it.unicam.gioco.domain.Enemy;
 import it.unicam.gioco.domain.Player;
 import it.unicam.gioco.service.GameService;
@@ -48,6 +49,12 @@ public class GameController {
     @FXML
     private Button healButton;
 
+    @FXML
+    private Button nextEnemyButton;
+
+    @FXML
+    private Label xpLabel;
+
     public void initialize() {
         System.out.println("GameController initialized");
     }
@@ -59,14 +66,59 @@ public class GameController {
 
     @FXML
     public void handleAttack() {
-        String battleMessage = gameService.attackEnemy();
+        BattleResult battleResult = gameService.attackEnemy();
+        String battleMessage = buildBattleMessage(battleResult);
         updateView(battleMessage);
     }
 
     @FXML
     public void handleHeal(){
-        String battleMessage = gameService.healPlayer();
+        BattleResult battleResult = gameService.healPlayer();
+        String battleMessage = buildBattleMessage(battleResult);
         updateView(battleMessage);
+    }
+    @FXML
+    public void handleNextEnemy(){
+        BattleResult battleResult = gameService.spawnNewEnemy();
+        String battleMessage = buildBattleMessage(battleResult);
+        updateView(battleMessage);
+
+    }
+
+
+    private String buildBattleMessage(BattleResult battleResult) {
+        if (battleResult.isHealUsed()) {
+            if (battleResult.isPlayerDefeated()) {
+                return "Hero healed 15 HP. Slime dealt " + battleResult.getEnemyDamageDealt() + " damage. Player defeated.";
+            }
+
+            if (battleResult.getEnemyDamageDealt() > 0) {
+                return "Hero healed 15 HP. Slime dealt " + battleResult.getEnemyDamageDealt() + " damage.";
+            }
+
+            return "Hero healed 15 HP.";
+        }
+
+        if (battleResult.isEnemyDefeated()) {
+            return "Hero dealt " + battleResult.getPlayerDamageDealt()
+                    + " damage. Enemy defeated. Hero earn "
+                    + battleResult.getXpGained() + " XP.";
+        }
+
+        if (battleResult.isPlayerDefeated()) {
+            return "Hero dealt " + battleResult.getPlayerDamageDealt() + " damage. "
+                    + "Slime dealt " + battleResult.getEnemyDamageDealt() + " damage. Player defeated.";
+        }
+
+        if (battleResult.getPlayerDamageDealt() > 0 || battleResult.getEnemyDamageDealt() > 0) {
+            return "Hero dealt " + battleResult.getPlayerDamageDealt() + " damage. "
+                    + "Slime dealt " + battleResult.getEnemyDamageDealt() + " damage.";
+        }
+        if(battleResult.isEnemyGenerated()){
+            return "A enemy as be generated";
+        }
+
+        return "No action performed.";
     }
 
     private void updateView(String battleMessage) {
@@ -80,6 +132,7 @@ public class GameController {
             playerNameLabel.setText("Player name: " + player.getName());
             playerHealthLabel.setText("Player health: " + player.getHealthPoints());
             playerLevelLabel.setText("Player level: " + player.getLevel());
+            xpLabel.setText("Player XP = " + player.getExperiencePoints());
             playerHealthBar.setProgress((double) player.getHealthPoints() / player.getMaxHealthPoints());
         } else {
             playerNameLabel.setText("Player name: not available");
@@ -103,12 +156,17 @@ public class GameController {
         if (player == null || !player.isAlive()) {
             attackButton.setDisable(true);
             healButton.setDisable(true);
+            nextEnemyButton.setDisable(true);
+
         } else if (enemy == null || !enemy.isAlive()) {
             attackButton.setDisable(true);
             healButton.setDisable(true);
+            nextEnemyButton.setDisable(false);
         } else {
             attackButton.setDisable(false);
             healButton.setDisable(false);
+            nextEnemyButton.setDisable(true);
+
         }
     }
 }

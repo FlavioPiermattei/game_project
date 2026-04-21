@@ -24,4 +24,6 @@ javafx {
 
 application {
     mainClass.set("it.unicam.gioco.MainApplication")
+
+
 }
