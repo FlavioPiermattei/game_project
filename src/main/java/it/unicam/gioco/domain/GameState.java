@@ -1,5 +1,6 @@
 package it.unicam.gioco.domain;
 
+
 public class GameState {
 
     private boolean gameStarted;

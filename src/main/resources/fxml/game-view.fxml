@@ -14,11 +14,12 @@
     <Label fx:id="gameStatusLabel" text="Game status"/>
     <Label fx:id="sceneNameLabel" text="Scene name"/>
     <Label fx:id="playerNameLabel" text="Player Name"/>
+    <Label fx:id="playerXpLabel" text="Player Xp"/>
     <Label fx:id="playerHealthLabel" text="Player Health"/>
     <ProgressBar fx:id="playerHealthBar" prefWidth="200"/>
     <Label fx:id="playerLevelLabel" text="Player Level"/>
-    <Label fx:id="xpLabel" text="xp"/>
     <Label fx:id="enemyNameLabel" text="Enemy Name"/>
+    <Label fx:id="enemyLevelLabel" text="Enemy Level"/>
     <Label fx:id="enemyHealthLabel" text="Enemy Health"/>
     <ProgressBar fx:id="enemyHealthBar" prefWidth="200"/>
     <Label fx:id="battleMessageLabel" text="Battle Message"/>

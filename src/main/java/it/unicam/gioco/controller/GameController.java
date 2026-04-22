@@ -53,7 +53,10 @@ public class GameController {
     private Button nextEnemyButton;
 
     @FXML
-    private Label xpLabel;
+    private Label enemyLevelLabel;
+
+    @FXML
+    private Label playerXpLabel;
 
     public void initialize() {
         System.out.println("GameController initialized");
@@ -100,19 +103,24 @@ public class GameController {
         }
 
         if (battleResult.isEnemyDefeated()) {
+            if(battleResult.isLvlUp()){
+                return "Hero dealt " + battleResult.getPlayerDamageDealt()
+                        + " damage. Enemy Lv" + gameService.getGameState().getEnemy().getLevel() + " defeated. Hero earn "
+                        + battleResult.getXpGained() + " XP. Hero Level up!";
+            }
             return "Hero dealt " + battleResult.getPlayerDamageDealt()
-                    + " damage. Enemy defeated. Hero earn "
+                    + " damage. Enemy Lv" + gameService.getGameState().getEnemy().getLevel() + " defeated. Hero earn "
                     + battleResult.getXpGained() + " XP.";
         }
 
         if (battleResult.isPlayerDefeated()) {
             return "Hero dealt " + battleResult.getPlayerDamageDealt() + " damage. "
-                    + "Slime dealt " + battleResult.getEnemyDamageDealt() + " damage. Player defeated.";
+                    + gameService.getGameState().getEnemy().getName() + " dealt "+ battleResult.getEnemyDamageDealt() + " damage. Player defeated.";
         }
 
         if (battleResult.getPlayerDamageDealt() > 0 || battleResult.getEnemyDamageDealt() > 0) {
             return "Hero dealt " + battleResult.getPlayerDamageDealt() + " damage. "
-                    + "Slime dealt " + battleResult.getEnemyDamageDealt() + " damage.";
+                    + gameService.getGameState().getEnemy().getName() + " dealt " + battleResult.getEnemyDamageDealt() + " damage.";
         }
         if(battleResult.isEnemyGenerated()){
             return "A enemy as be generated";
@@ -132,7 +140,7 @@ public class GameController {
             playerNameLabel.setText("Player name: " + player.getName());
             playerHealthLabel.setText("Player health: " + player.getHealthPoints());
             playerLevelLabel.setText("Player level: " + player.getLevel());
-            xpLabel.setText("Player XP = " + player.getExperiencePoints());
+            playerXpLabel.setText("Player XP = " + player.getExperiencePoints());
             playerHealthBar.setProgress((double) player.getHealthPoints() / player.getMaxHealthPoints());
         } else {
             playerNameLabel.setText("Player name: not available");
@@ -143,6 +151,7 @@ public class GameController {
 
         if (enemy != null) {
             enemyNameLabel.setText("Enemy name: " + enemy.getName());
+            enemyLevelLabel.setText(enemy.getName() + " Lvl" + enemy.getLevel());
             enemyHealthLabel.setText("Enemy health: " + enemy.getHealthPoints());
            enemyHealthBar.setProgress((double) enemy.getHealthPoints() / enemy.getMaxHealthPoints());
         } else {

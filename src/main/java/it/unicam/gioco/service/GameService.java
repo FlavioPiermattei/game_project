@@ -4,13 +4,19 @@ import it.unicam.gioco.domain.BattleResult;
 import it.unicam.gioco.domain.Enemy;
 import it.unicam.gioco.domain.GameState;
 import it.unicam.gioco.domain.Player;
+import it.unicam.gioco.domain.enemy.Goblin;
+import it.unicam.gioco.domain.enemy.Slime;
+import it.unicam.gioco.domain.enemy.Wolf;
+import it.unicam.gioco.domain.EnemyFactory;
 
 public class GameService {
 
     private final GameState gameState;
+    private final EnemyFactory enemyFactory;
 
     private int enemyCounter;
     public GameService() {
+        this.enemyFactory = new EnemyFactory();
         this.gameState = new GameState();
         this.enemyCounter = 1;
     }
@@ -19,7 +25,7 @@ public class GameService {
         gameState.setGameStarted(true);
         gameState.setCurrentSceneName("Scene1");
         gameState.setPlayer(new Player("Hero", 1,100,15));
-        gameState.setEnemy(new Enemy("Monster", "Slime", 1, 50,5,15));
+        gameState.setEnemy(new Enemy("Slime", "Monster", 1, 50,5,15));
     }
 
     public BattleResult attackEnemy() {
@@ -91,18 +97,15 @@ public class GameService {
     }
 
     public BattleResult spawnNewEnemy(){
-        enemyCounter++;
-
         BattleResult battleResult = new BattleResult();
+
+        enemyCounter++;
         int enemyLevel = enemyCounter;
-        int health = 40 + (enemyLevel * 10);
-        int attack = 4 + enemyLevel;
-        int reward = 30 + (enemyLevel * 10);
 
-        battleResult.setEnemyGenerated(true);
-        gameState.setEnemy(new Enemy("Mostro","Slime",enemyLevel,health,attack,reward));
-
+        gameState.setEnemy(enemyFactory.createEnemy(enemyLevel));
 
         return battleResult;
     }
+
+
 }
