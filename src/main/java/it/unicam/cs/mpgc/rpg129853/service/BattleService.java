@@ -1,10 +1,10 @@
-package it.unicam.gioco.service;
+package it.unicam.cs.mpgc.rpg129853.service;
 
-import it.unicam.gioco.domain.BattleResult;
-import it.unicam.gioco.domain.Enemy;
-import it.unicam.gioco.domain.EnemyFactory;
-import it.unicam.gioco.domain.GameState;
-import it.unicam.gioco.domain.Player;
+import it.unicam.cs.mpgc.rpg129853.domain.BattleResult;
+import it.unicam.cs.mpgc.rpg129853.domain.Enemy;
+import it.unicam.cs.mpgc.rpg129853.domain.EnemyFactory;
+import it.unicam.cs.mpgc.rpg129853.domain.GameState;
+import it.unicam.cs.mpgc.rpg129853.domain.Player;
 
 public class BattleService {
 

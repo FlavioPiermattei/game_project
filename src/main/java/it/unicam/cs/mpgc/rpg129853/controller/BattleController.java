@@ -1,10 +1,10 @@
-package it.unicam.gioco.controller;
+package it.unicam.cs.mpgc.rpg129853.controller;
 
-import it.unicam.gioco.domain.BattleResult;
-import it.unicam.gioco.domain.Enemy;
-import it.unicam.gioco.domain.Player;
-import it.unicam.gioco.service.BattleService;
-import it.unicam.gioco.service.GameService;
+import it.unicam.cs.mpgc.rpg129853.domain.BattleResult;
+import it.unicam.cs.mpgc.rpg129853.domain.Enemy;
+import it.unicam.cs.mpgc.rpg129853.domain.Player;
+import it.unicam.cs.mpgc.rpg129853.service.BattleService;
+import it.unicam.cs.mpgc.rpg129853.service.GameService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

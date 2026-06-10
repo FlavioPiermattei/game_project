@@ -9,7 +9,7 @@
      BorderPane is a container that divides the screen into regions (top, center, bottom, etc.) -->
 <BorderPane fx:id="rootPane"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="it.unicam.gioco.controller.MainController">
+            fx:controller="it.unicam.cs.mpgc.rpg129853.controller.MainController">
 
     <!-- Center region of the BorderPane -->
     <center>

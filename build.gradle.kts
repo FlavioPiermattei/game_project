@@ -23,7 +23,7 @@ javafx {
 }
 
 application {
-    mainClass.set("it.unicam.gioco.MainApplication")
+    mainClass.set("it.unicam.cs.mpgc.rpg129853.MainApplication")
 
 
 }

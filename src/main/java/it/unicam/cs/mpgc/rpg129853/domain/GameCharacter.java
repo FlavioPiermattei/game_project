@@ -1,4 +1,4 @@
-package it.unicam.gioco.domain;
+package it.unicam.cs.mpgc.rpg129853.domain;
 
 public abstract class GameCharacter {
 

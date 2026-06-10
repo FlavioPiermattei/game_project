@@ -1,6 +1,6 @@
-package it.unicam.gioco.domain.enemy;
+package it.unicam.cs.mpgc.rpg129853.domain.enemy;
 
-import it.unicam.gioco.domain.Enemy;
+import it.unicam.cs.mpgc.rpg129853.domain.Enemy;
 
 public class Wolf extends Enemy {
     public Wolf(int level) {

@@ -1,8 +1,8 @@
-package it.unicam.gioco.domain;
+package it.unicam.cs.mpgc.rpg129853.domain;
 
-import it.unicam.gioco.domain.enemy.Goblin;
-import it.unicam.gioco.domain.enemy.Slime;
-import it.unicam.gioco.domain.enemy.Wolf;
+import it.unicam.cs.mpgc.rpg129853.domain.enemy.Goblin;
+import it.unicam.cs.mpgc.rpg129853.domain.enemy.Slime;
+import it.unicam.cs.mpgc.rpg129853.domain.enemy.Wolf;
 
 public class EnemyFactory {
 

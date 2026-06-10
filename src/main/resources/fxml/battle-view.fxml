@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="it.unicam.gioco.controller.BattleController"
+      fx:controller="it.unicam.cs.mpgc.rpg129853.controller.BattleController"
       alignment="CENTER"
       spacing="20">
 
