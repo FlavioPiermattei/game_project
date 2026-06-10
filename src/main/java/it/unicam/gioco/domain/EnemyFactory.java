@@ -16,7 +16,7 @@ public class EnemyFactory {
         if(enemyType == 2){
             return new Goblin(level);
         }
-            return new Wolf(level);
-        }
+        return new Wolf(level);
     }
+}
 

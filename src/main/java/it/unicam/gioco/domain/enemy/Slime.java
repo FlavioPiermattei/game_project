@@ -5,12 +5,12 @@ import it.unicam.gioco.domain.Enemy;
 public class Slime  extends Enemy {
     public Slime(int level) {
         super(
-                "Goblin",
-                "Humanoid",
-                2 + level,
-                50 + (level * 12),
-                6 + (level * 2),
-                30 + (level * 12)
+                "Slime",
+                "Ooze",
+                1 + level,
+                40 + (level * 10),
+                4 + (level * 2),
+                20 + (level * 10)
         );
 
     }

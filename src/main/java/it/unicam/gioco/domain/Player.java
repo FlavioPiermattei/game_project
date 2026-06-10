@@ -1,7 +1,5 @@
 package it.unicam.gioco.domain;
 
-import it.unicam.gioco.service.GameService;
-
 public class Player extends GameCharacter {
 
     private int experiencePoints;
@@ -35,7 +33,7 @@ public class Player extends GameCharacter {
     public void levelUp(){
         increaseLevel();
         this.experienceToNextLevel += 50;
-        increaseMaxHealtPoints(20);
+        increaseMaxHealthPoints(20);
         increaseAttackPoints(5);
         heal(20);
 

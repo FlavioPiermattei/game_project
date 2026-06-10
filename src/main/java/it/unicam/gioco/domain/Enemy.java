@@ -1,6 +1,6 @@
 package it.unicam.gioco.domain;
 
-public class Enemy extends GameCharacter {
+public abstract class Enemy extends GameCharacter {
 
     private String type;
     private int experienceReward;

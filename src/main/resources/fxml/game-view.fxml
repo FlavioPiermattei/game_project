@@ -4,26 +4,20 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ProgressBar?>
-<VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="it.unicam.gioco.controller.GameController"
+
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane fx:id="rootPane"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.unicam.gioco.controller.GameController">
+
+    <center>
+    <VBox xmlns:fx="http://javafx.com/fxml"
       alignment="CENTER"
       spacing="20">
 
-    <Label text="Game Screen" style="-fx-font-size: 24px;"/>
-    <Label fx:id="gameStatusLabel" text="Game status"/>
-    <Label fx:id="sceneNameLabel" text="Scene name"/>
-    <Label fx:id="playerNameLabel" text="Player Name"/>
-    <Label fx:id="playerXpLabel" text="Player Xp"/>
-    <Label fx:id="playerHealthLabel" text="Player Health"/>
-    <ProgressBar fx:id="playerHealthBar" prefWidth="200"/>
-    <Label fx:id="playerLevelLabel" text="Player Level"/>
-    <Label fx:id="enemyNameLabel" text="Enemy Name"/>
-    <Label fx:id="enemyLevelLabel" text="Enemy Level"/>
-    <Label fx:id="enemyHealthLabel" text="Enemy Health"/>
-    <ProgressBar fx:id="enemyHealthBar" prefWidth="200"/>
-    <Label fx:id="battleMessageLabel" text="Battle Message"/>
-    <Button fx:id="attackButton" text="Attack" onAction="#handleAttack"/>
-    <Button fx:id="healButton" text="Heal" onAction="#handleHeal"/>
-    <Button fx:id="nextEnemyButton" text="nextEnemy" onAction="#handleNextEnemy"/>
+        <Label fx:id="gameStatusLabel" text="Game status"/>
+    <Button fx:id="battleSceneButton" text="Battle Scene" onAction="#handleBattleScene"/>
 </VBox>
+
+    </center>
+</BorderPane>

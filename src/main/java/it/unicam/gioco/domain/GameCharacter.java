@@ -36,10 +36,6 @@ public abstract class GameCharacter {
         return healthPoints;
     }
 
-    public void setHealthPoints(int healthPoints) {
-        this.healthPoints = healthPoints;
-    }
-
     public boolean isAlive() {
         return healthPoints > 0;
     }
@@ -60,7 +56,7 @@ public abstract class GameCharacter {
         }
     }
 
-    protected void increaseMaxHealtPoints(int amount){
+    protected void increaseMaxHealthPoints(int amount){
         this.maxHealthPoints += amount;
     }
 
@@ -70,10 +66,5 @@ public abstract class GameCharacter {
 
     public void increaseLevel(){
         this.level++;
-    }
-
-
-    public void setLevel(int level) {
-        this.level = level;
     }
 }
