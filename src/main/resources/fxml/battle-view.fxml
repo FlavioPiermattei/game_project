@@ -27,4 +27,5 @@
     <Button fx:id="attackButton" text="Attack" onAction="#handleAttack"/>
     <Button fx:id="healButton" text="Heal" onAction="#handleHeal"/>
     <Button fx:id="nextEnemyButton" text="nextEnemy" onAction="#handleNextEnemy"/>
+    <Button fx:id="backToMenuButton" text="Back to menu" onAction="#handleBackToMenu"/>
 </VBox>

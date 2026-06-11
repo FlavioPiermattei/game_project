@@ -5,15 +5,11 @@ import it.unicam.cs.mpgc.rpg129853.service.GameService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
 
 public class GameController {
     private NavigationService navigationService;
     private GameService gameService;
 
-
-    @FXML
-    private BorderPane rootPane;
 
     @FXML
     private Button battleSceneButton;
@@ -23,17 +19,15 @@ public class GameController {
     private Label gameStatusLabel;
 
     public void initialize() {
-
-        this.navigationService = new NavigationService();
-
-
-        navigationService.setRootPane(rootPane);
-
         System.out.println("GameController initialize");
     }
 
     public void setGameService(GameService gameService) {
         this.gameService = gameService;
+    }
+
+    public void setNavigationService(NavigationService navigationService) {
+        this.navigationService = navigationService;
     }
 
     @FXML
@@ -42,6 +36,7 @@ public class GameController {
         Object controller = navigationService.navigateTo("/fxml/battle-view.fxml");
         if (controller instanceof BattleController battleController) {
             battleController.setGameService(gameService);
+            battleController.setNavigationService(navigationService);
         }
         gameStatusLabel.setText("Battle started");
     }

@@ -69,6 +69,7 @@ public class MainController {
 
         if (controller instanceof GameController gameController) {
             gameController.setGameService(gameService);
+            gameController.setNavigationService(navigationService);
         }
 
 

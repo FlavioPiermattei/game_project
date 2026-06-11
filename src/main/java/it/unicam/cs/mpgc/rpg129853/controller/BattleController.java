@@ -5,6 +5,7 @@ import it.unicam.cs.mpgc.rpg129853.domain.Enemy;
 import it.unicam.cs.mpgc.rpg129853.domain.Player;
 import it.unicam.cs.mpgc.rpg129853.service.BattleService;
 import it.unicam.cs.mpgc.rpg129853.service.GameService;
+import it.unicam.cs.mpgc.rpg129853.service.NavigationService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -14,6 +15,7 @@ public class BattleController {
 
     private GameService gameService;
     private BattleService battleService;
+    private NavigationService navigationService;
 
     @FXML private Label battleStatusLabel;
     @FXML private Label sceneNameLabel;
@@ -30,6 +32,7 @@ public class BattleController {
     @FXML private Button attackButton;
     @FXML private Button healButton;
     @FXML private Button nextEnemyButton;
+    @FXML private Button backToMenuButton;
 
     public void initialize() {
         System.out.println("BattleController initialized");
@@ -39,6 +42,10 @@ public class BattleController {
         this.gameService = gameService;
         this.battleService = gameService.getBattleService();
         updateView("Battle ready.");
+    }
+
+    public void setNavigationService(NavigationService navigationService) {
+        this.navigationService = navigationService;
     }
 
     @FXML
@@ -57,6 +64,15 @@ public class BattleController {
     public void handleNextEnemy() {
         BattleResult battleResult = battleService.spawnNewEnemy();
         updateView(buildBattleMessage(battleResult));
+    }
+
+    @FXML
+    public void handleBackToMenu() {
+        Object controller = navigationService.navigateTo("/fxml/game-view.fxml");
+        if (controller instanceof GameController gameController) {
+            gameController.setGameService(gameService);
+            gameController.setNavigationService(navigationService);
+        }
     }
 
     private String buildBattleMessage(BattleResult battleResult) {
