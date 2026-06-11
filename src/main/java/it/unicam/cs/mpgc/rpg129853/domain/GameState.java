@@ -7,6 +7,7 @@ public class GameState {
     private String currentSceneName;
     private Player player;
     private Enemy enemy;
+    private boolean victoryAchieved;
 
     public GameState(){
 
@@ -14,6 +15,7 @@ public class GameState {
         this.currentSceneName = "Main";
         this.player = null;
         this.enemy = null;
+        this.victoryAchieved = false;
     }
 
     public boolean isGameStarted(){
@@ -40,5 +42,11 @@ public class GameState {
     }
     public void setEnemy(Enemy enemy) {
         this.enemy = enemy;
+    }
+    public boolean isVictoryAchieved(){
+        return victoryAchieved;
+    }
+    public void setVictoryAchieved(boolean victoryAchieved){
+        this.victoryAchieved = victoryAchieved;
     }
 }

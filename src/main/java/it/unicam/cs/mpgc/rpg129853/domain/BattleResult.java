@@ -10,6 +10,7 @@ public class BattleResult {
     private boolean enemyGenerated;
     private int xpGained;
     private boolean lvlUp;
+    private boolean victory;
 
     public BattleResult() {
         this.playerDamageDealt = 0;
@@ -20,6 +21,7 @@ public class BattleResult {
         this.enemyGenerated = false;
         this.xpGained = 0;
         this.lvlUp = false;
+        this.victory = false;
     }
 
     public int getPlayerDamageDealt() {
@@ -84,6 +86,14 @@ public class BattleResult {
 
     public void setLvlUp(boolean lvlUp) {
         this.lvlUp = lvlUp;
+    }
+
+    public boolean isVictory() {
+        return victory;
+    }
+
+    public void setVictory(boolean victory) {
+        this.victory = victory;
     }
 }
 

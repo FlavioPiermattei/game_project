@@ -27,6 +27,7 @@ public class BattleController {
     @FXML private Label enemyLevelLabel;
     @FXML private Label enemyHealthLabel;
     @FXML private Label battleMessageLabel;
+    @FXML private Label battleOutcomeLabel;
     @FXML private ProgressBar playerHealthBar;
     @FXML private ProgressBar enemyHealthBar;
     @FXML private Button attackButton;
@@ -101,6 +102,9 @@ public class BattleController {
             if (battleResult.isLvlUp()) {
                 message += " Level up!";
             }
+            if (battleResult.isVictory()) {
+                message += " " + playerName + " reached level " + BattleService.VICTORY_LEVEL + ". Victory!";
+            }
             return message;
         }
 
@@ -159,14 +163,22 @@ public class BattleController {
         battleMessageLabel.setText(battleMessage);
 
         if (player == null || !player.isAlive()) {
+            battleOutcomeLabel.setText("GAME OVER");
+            attackButton.setDisable(true);
+            healButton.setDisable(true);
+            nextEnemyButton.setDisable(true);
+        } else if (gameService.getGameState().isVictoryAchieved()) {
+            battleOutcomeLabel.setText("VICTORY!");
             attackButton.setDisable(true);
             healButton.setDisable(true);
             nextEnemyButton.setDisable(true);
         } else if (enemy == null || !enemy.isAlive()) {
+            battleOutcomeLabel.setText("");
             attackButton.setDisable(true);
             healButton.setDisable(true);
             nextEnemyButton.setDisable(false);
         } else {
+            battleOutcomeLabel.setText("");
             attackButton.setDisable(false);
             healButton.setDisable(false);
             nextEnemyButton.setDisable(true);

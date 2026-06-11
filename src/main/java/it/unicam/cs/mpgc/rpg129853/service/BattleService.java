@@ -9,6 +9,7 @@ import it.unicam.cs.mpgc.rpg129853.domain.Player;
 public class BattleService {
 
     public static final int HEAL_AMOUNT = 15;
+    public static final int VICTORY_LEVEL = 5;
 
     private final GameState gameState;
     private final EnemyFactory enemyFactory;
@@ -42,6 +43,11 @@ public class BattleService {
 
             boolean levelUpHappened = player.gainExperience(enemy.getExperienceReward());
             battleResult.setLvlUp(levelUpHappened);
+
+            if (player.getLevel() >= VICTORY_LEVEL) {
+                gameState.setVictoryAchieved(true);
+                battleResult.setVictory(true);
+            }
 
             return battleResult;
         }

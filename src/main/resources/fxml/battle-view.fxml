@@ -24,6 +24,7 @@
     <Label fx:id="enemyHealthLabel" text="Enemy Health"/>
     <ProgressBar fx:id="enemyHealthBar" prefWidth="200"/>
     <Label fx:id="battleMessageLabel" text="Battle Message"/>
+    <Label fx:id="battleOutcomeLabel" text="" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
     <Button fx:id="attackButton" text="Attack" onAction="#handleAttack"/>
     <Button fx:id="healButton" text="Heal" onAction="#handleHeal"/>
     <Button fx:id="nextEnemyButton" text="nextEnemy" onAction="#handleNextEnemy"/>
