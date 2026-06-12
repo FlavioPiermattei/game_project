@@ -6,13 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="366f2bcf-8dee-4192-8d42-7b4fa7f0548a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/GameCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/domain/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/gioco/service/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/game-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg129853/controller/BattleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg129853/controller/BattleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg129853/domain/BattleResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg129853/domain/BattleResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg129853/domain/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg129853/domain/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg129853/service/BattleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg129853/service/BattleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/battle-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/battle-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,25 +65,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Gioco_MCG [:it.unicam.gioco.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Gioco_MCG [:it.unicam.gioco.MainApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/combat-system&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/flavi/Desktop/Università/Modellazione/ProgettoMGC/Gioco_MCG&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/flavi/Desktop/Università/Modellazione/ProgettoMGC/Gioco_MCG/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.Gioco_MCG [:it.unicam.gioco.Main.main()].executor": "Run",
+    "Gradle.Gioco_MCG [:it.unicam.gioco.MainApplication.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature/battle-end-state",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/flavi/Desktop/Università/Modellazione/ProgettoMGC/Gioco_MCG",
+    "onboarding.tips.debug.path": "C:/Users/flavi/Desktop/Università/Modellazione/ProgettoMGC/Gioco_MCG/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "configurable.group.editor"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.MainApplication">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.unicam.gioco.Main" />

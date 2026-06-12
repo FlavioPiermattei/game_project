@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import java.io.IOException;
+
 public class GameController {
     private NavigationService navigationService;
     private GameService gameService;
@@ -14,6 +16,8 @@ public class GameController {
     @FXML
     private Button battleSceneButton;
 
+    @FXML
+    private Button saveGameButton;
 
     @FXML
     private Label gameStatusLabel;
@@ -39,6 +43,17 @@ public class GameController {
             battleController.setNavigationService(navigationService);
         }
         gameStatusLabel.setText("Battle started");
+    }
+
+    @FXML
+    public void handleSaveGame() {
+        try {
+            gameService.saveGame();
+            gameStatusLabel.setText("Game saved");
+        } catch (IOException e) {
+            gameStatusLabel.setText("Failed to save game");
+            e.printStackTrace();
+        }
     }
 
 }

@@ -9,10 +9,14 @@ public abstract class GameCharacter {
     protected int level;
 
     public GameCharacter(String nome,int level, int healthPoints, int attackPoints) {
+        this(nome, level, healthPoints, healthPoints, attackPoints);
+    }
+
+    protected GameCharacter(String nome, int level, int healthPoints, int maxHealthPoints, int attackPoints) {
         this.name = nome;
         this.attackPoints = attackPoints;
         this.healthPoints = healthPoints;
-        this.maxHealthPoints = healthPoints;
+        this.maxHealthPoints = maxHealthPoints;
         this.level = level;
     }
 

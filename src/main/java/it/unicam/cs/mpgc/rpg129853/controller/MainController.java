@@ -77,4 +77,33 @@ public class MainController {
         System.out.println("Game started: " + gameService.getGameState().isGameStarted());
         System.out.println("Current scene: " + gameService.getGameState().getCurrentSceneName());
     }
+
+    /**
+     * Handles the "Load Game" button click.
+     *
+     * Loads the saved game state through the service layer and, if a save
+     * file is found, moves to the game screen. Otherwise the status label
+     * informs the user that there is nothing to load.
+     */
+    @FXML
+    public void handleLoadGame() {
+        try {
+            if (!gameService.loadGame()) {
+                statusLabel.setText("No saved game found");
+                return;
+            }
+        } catch (IOException e) {
+            statusLabel.setText("Failed to load game");
+            e.printStackTrace();
+            return;
+        }
+
+        statusLabel.setText("Game Loaded");
+        Object controller = navigationService.navigateTo("/fxml/game-view.fxml");
+
+        if (controller instanceof GameController gameController) {
+            gameController.setGameService(gameService);
+            gameController.setNavigationService(navigationService);
+        }
+    }
     }

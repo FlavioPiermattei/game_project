@@ -25,6 +25,9 @@
             <!-- Button that triggers a method in the controller -->
             <Button text="Start Game" onAction="#handleStartGame"/>
 
+            <!-- Loads a previously saved game, if any -->
+            <Button text="Load Game" onAction="#handleLoadGame"/>
+
         </VBox>
     </center>
 

@@ -16,6 +16,7 @@
 
         <Label fx:id="gameStatusLabel" text="Game status"/>
     <Button fx:id="battleSceneButton" text="Battle Scene" onAction="#handleBattleScene"/>
+    <Button fx:id="saveGameButton" text="Save Game" onAction="#handleSaveGame"/>
 </VBox>
 
     </center>

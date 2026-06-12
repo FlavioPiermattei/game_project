@@ -11,6 +11,12 @@ public class Player extends GameCharacter {
         this.experienceToNextLevel = 100;
     }
 
+    public Player(String name, int level, int healthPoints, int maxHealthPoints, int attackPoints, int experiencePoints) {
+        super(name, level, healthPoints, maxHealthPoints, attackPoints);
+        this.experiencePoints = experiencePoints;
+        this.experienceToNextLevel = 100 + (level - 1) * 50;
+    }
+
     public int getExperiencePoints() {
         return experiencePoints;
     }

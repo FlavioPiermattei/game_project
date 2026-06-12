@@ -94,4 +94,12 @@ public class BattleService {
         battleResult.setEnemyGenerated(true);
         return battleResult;
     }
+
+    public int getEnemyCounter() {
+        return enemyCounter;
+    }
+
+    public void setEnemyCounter(int enemyCounter) {
+        this.enemyCounter = enemyCounter;
+    }
 }
