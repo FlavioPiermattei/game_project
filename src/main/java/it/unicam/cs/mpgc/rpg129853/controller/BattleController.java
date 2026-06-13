@@ -35,6 +35,7 @@ public class BattleController {
     @FXML private Button attackButton;
     @FXML private Button healButton;
     @FXML private Button nextEnemyButton;
+    @FXML private Button restartButton;
     @FXML private Button saveGameButton;
     @FXML private Button backToMenuButton;
 
@@ -68,6 +69,16 @@ public class BattleController {
     public void handleNextEnemy() {
         BattleResult battleResult = battleService.spawnNewEnemy();
         updateView(buildBattleMessage(battleResult));
+    }
+
+    @FXML
+    public void handleRestart() {
+        gameService.startNewGame();
+        Object controller = navigationService.navigateTo("/fxml/game-view.fxml");
+        if (controller instanceof GameController gameController) {
+            gameController.setGameService(gameService);
+            gameController.setNavigationService(navigationService);
+        }
     }
 
     @FXML
@@ -181,21 +192,25 @@ public class BattleController {
             attackButton.setDisable(true);
             healButton.setDisable(true);
             nextEnemyButton.setDisable(true);
+            restartButton.setDisable(false);
         } else if (gameService.getGameState().isVictoryAchieved()) {
             battleOutcomeLabel.setText("VICTORY!");
             attackButton.setDisable(true);
             healButton.setDisable(true);
             nextEnemyButton.setDisable(true);
+            restartButton.setDisable(false);
         } else if (enemy == null || !enemy.isAlive()) {
             battleOutcomeLabel.setText("");
             attackButton.setDisable(true);
             healButton.setDisable(true);
             nextEnemyButton.setDisable(false);
+            restartButton.setDisable(true);
         } else {
             battleOutcomeLabel.setText("");
             attackButton.setDisable(false);
             healButton.setDisable(false);
             nextEnemyButton.setDisable(true);
+            restartButton.setDisable(true);
         }
     }
 }
