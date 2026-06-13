@@ -19,6 +19,8 @@ public class MainApplication extends Application{
 
         //Loads all the graphical content form the FXML file into a new Scene object
         Scene scene = new Scene(loader.load(),800,600);
+        //Applies the application stylesheet to the scene
+        scene.getStylesheets().add(MainApplication.class.getResource("/css/app.css").toExternalForm());
         //Set the tile shown at the top of the application window
         stage.setTitle("Unkown");
         //Attaches the created scene to the main window (stage)

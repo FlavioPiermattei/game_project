@@ -1,0 +1,48 @@
+.root {
+    -fx-background-color: #1b1d2a;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.scroll-pane, .scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.label {
+    -fx-text-fill: #e8eaf2;
+}
+
+.title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f4d27a;
+}
+
+.menu-button, .action-button {
+    -fx-min-width: 160px;
+    -fx-padding: 10 18;
+    -fx-font-size: 14px;
+    -fx-background-color: #3a3f5c;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.menu-button:hover, .action-button:hover {
+    -fx-background-color: #4a5078;
+}
+
+.action-button:disabled {
+    -fx-opacity: 0.5;
+}
+
+.progress-bar {
+    -fx-pref-height: 14px;
+}
+
+.hp-player > .bar {
+    -fx-background-color: #4caf50;
+}
+
+.hp-enemy > .bar {
+    -fx-background-color: #e05a5a;
+}

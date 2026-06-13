@@ -17,16 +17,16 @@
         <VBox fx:id="mainContainer" alignment="CENTER" spacing="20">
 
             <!-- Static title label -->
-            <Label text="Benvenuto nel gioco"/>
+            <Label text="Benvenuto nel gioco" styleClass="title"/>
 
             <!-- Label controlled by the controller (dynamic content) -->
             <Label fx:id="statusLabel" text="Game not started"/>
 
             <!-- Button that triggers a method in the controller -->
-            <Button text="Start Game" onAction="#handleStartGame"/>
+            <Button text="Start Game" onAction="#handleStartGame" styleClass="menu-button"/>
 
             <!-- Loads a previously saved game, if any -->
-            <Button text="Load Game" onAction="#handleLoadGame"/>
+            <Button text="Load Game" onAction="#handleLoadGame" styleClass="menu-button"/>
 
         </VBox>
     </center>

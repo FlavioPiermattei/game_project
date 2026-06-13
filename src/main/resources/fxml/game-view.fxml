@@ -14,9 +14,9 @@
       alignment="CENTER"
       spacing="20">
 
-        <Label fx:id="gameStatusLabel" text="Game status"/>
-    <Button fx:id="battleSceneButton" text="Battle Scene" onAction="#handleBattleScene"/>
-    <Button fx:id="saveGameButton" text="Save Game" onAction="#handleSaveGame"/>
+        <Label fx:id="gameStatusLabel" text="Game status" styleClass="title"/>
+    <Button fx:id="battleSceneButton" text="Battle Scene" onAction="#handleBattleScene" styleClass="menu-button"/>
+    <Button fx:id="saveGameButton" text="Save Game" onAction="#handleSaveGame" styleClass="menu-button"/>
 </VBox>
 
     </center>

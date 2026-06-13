@@ -6,27 +6,31 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="it.unicam.cs.mpgc.rpg129853.controller.BattleController"
-      alignment="CENTER"
-      spacing="20">
+<ScrollPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.unicam.cs.mpgc.rpg129853.controller.BattleController"
+            fitToWidth="true">
+<VBox alignment="CENTER"
+      spacing="20"
+      style="-fx-padding: 20;">
 
-    <Label text="Game Screen" style="-fx-font-size: 24px;"/>
+    <Label text="Game Screen" styleClass="title"/>
     <Label fx:id="battleStatusLabel" text="Battle status"/>
     <Label fx:id="sceneNameLabel" text="Scene name"/>
     <Label fx:id="playerNameLabel" text="Player Name"/>
     <Label fx:id="playerXpLabel" text="Player Xp"/>
     <Label fx:id="playerHealthLabel" text="Player Health"/>
-    <ProgressBar fx:id="playerHealthBar" prefWidth="200"/>
+    <ProgressBar fx:id="playerHealthBar" prefWidth="200" styleClass="hp-player"/>
     <Label fx:id="playerLevelLabel" text="Player Level"/>
     <Label fx:id="enemyNameLabel" text="Enemy Name"/>
     <Label fx:id="enemyLevelLabel" text="Enemy Level"/>
     <Label fx:id="enemyHealthLabel" text="Enemy Health"/>
-    <ProgressBar fx:id="enemyHealthBar" prefWidth="200"/>
+    <ProgressBar fx:id="enemyHealthBar" prefWidth="200" styleClass="hp-enemy"/>
     <Label fx:id="battleMessageLabel" text="Battle Message"/>
     <Label fx:id="battleOutcomeLabel" text="" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
-    <Button fx:id="attackButton" text="Attack" onAction="#handleAttack"/>
-    <Button fx:id="healButton" text="Heal" onAction="#handleHeal"/>
-    <Button fx:id="nextEnemyButton" text="nextEnemy" onAction="#handleNextEnemy"/>
-    <Button fx:id="backToMenuButton" text="Back to menu" onAction="#handleBackToMenu"/>
+    <Button fx:id="attackButton" text="Attack" onAction="#handleAttack" styleClass="action-button"/>
+    <Button fx:id="healButton" text="Heal" onAction="#handleHeal" styleClass="action-button"/>
+    <Button fx:id="nextEnemyButton" text="nextEnemy" onAction="#handleNextEnemy" styleClass="action-button"/>
+    <Button fx:id="saveGameButton" text="Save Game" onAction="#handleSaveGame" styleClass="action-button"/>
+    <Button fx:id="backToMenuButton" text="Back to menu" onAction="#handleBackToMenu" styleClass="action-button"/>
 </VBox>
+</ScrollPane>

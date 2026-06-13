@@ -11,6 +11,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 
+import java.io.IOException;
+
 public class BattleController {
 
     private GameService gameService;
@@ -33,6 +35,7 @@ public class BattleController {
     @FXML private Button attackButton;
     @FXML private Button healButton;
     @FXML private Button nextEnemyButton;
+    @FXML private Button saveGameButton;
     @FXML private Button backToMenuButton;
 
     public void initialize() {
@@ -65,6 +68,17 @@ public class BattleController {
     public void handleNextEnemy() {
         BattleResult battleResult = battleService.spawnNewEnemy();
         updateView(buildBattleMessage(battleResult));
+    }
+
+    @FXML
+    public void handleSaveGame() {
+        try {
+            gameService.saveGame();
+            battleMessageLabel.setText("Game saved");
+        } catch (IOException e) {
+            battleMessageLabel.setText("Failed to save game");
+            e.printStackTrace();
+        }
     }
 
     @FXML
